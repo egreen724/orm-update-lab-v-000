@@ -72,12 +72,6 @@ class Student
       self.new_from_db(row)
     end.first
   end
-
-
-    DB[:conn].execute(sql,name).map do |row|
-      self.new_from_db(row)
-    end.first
-  end
   
   def update
     sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?"
